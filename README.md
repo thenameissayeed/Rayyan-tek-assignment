@@ -1,10 +1,10 @@
 # Nadwa Attendance Management System
 
-A full-stack, bilingual (English/Urdu) attendance system for Admin and Teacher portals.
+A full-stack, bilingual (English/Urdu) attendance system featuring dedicated Admin and Teacher portals.
 
 ## 📁 Project Structure
-- **backend/**: Node.js/Express API with MongoDB.
-- **frontend/**: React Native (Expo) mobile/web application.
+- **backend/**: Node.js/Express API with MongoDB integration.
+- **frontend/**: React Native (Expo) cross-platform application (Web & Mobile).
 
 ## 🚀 Live Deployments
 - **Web App:** [Your Netlify Link]
@@ -23,19 +23,16 @@ A full-stack, bilingual (English/Urdu) attendance system for Admin and Teacher p
 2. `npm install`
 3. Start the app: `npx expo start`
 
-## 🌐 Deployment Steps
+---
 
-### Backend (Render)
-1. Push the code to GitHub.
-2. Create a "Web Service" on Render and point it to the `backend` directory.
-3. Set the Build Command: `npm install`
-4. Set the Start Command: `node server.js`
+## 📱 Mobile Build Instructions (APK/IPA)
+This project uses **EAS (Expo Application Services)** for cloud-based native builds.
 
-### Frontend (Netlify)
-1. Inside `frontend`, run: `npx expo export:web`
-2. This generates the `web-build` folder.
-3. Drag and drop the `web-build` folder into Netlify.
-
-## 📱 Mobile Build (APK)
-Generate the Android APK via EAS:
-`eas build -p android --profile preview`
+### To Generate Android APK:
+1. **Install EAS CLI:** `npm install -g eas-cli`
+2. **Login:** `eas login` (Using Expo account credentials)
+3. **Configure:** Ensure `eas.json` is set to `"buildType": "apk"` under the preview profile.
+4. **Build:** Run the following command:
+   ```bash
+   cd frontend
+   eas build --platform android --profile preview
