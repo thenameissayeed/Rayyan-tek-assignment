@@ -14,6 +14,9 @@ const LoginScreen = ({ navigation, route }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // 1. ADD YOUR LIVE RENDER URL HERE
+  const API_URL = "https://rayyan-tek-assignment.onrender.com/api/public";
+
   const { userRole, language } = route.params || { userRole: "Admin", language: "ENG" };
 
   const t = (en, ur) => (language === "ENG" ? en : ur);
@@ -28,6 +31,8 @@ const LoginScreen = ({ navigation, route }) => {
       return;
     }
 
+    // Note: In a real production app, you would fetch from API_URL here.
+    // For now, we are using your hardcoded credentials logic:
     if (userRole === "Admin") {
       if (cleanEmail === "admin@college.com" && cleanPass === "admin123") {
         navigation.navigate("AdminDashboard");
@@ -37,7 +42,7 @@ const LoginScreen = ({ navigation, route }) => {
     } 
     else if (userRole === "Teacher") {
       if (cleanEmail === "teacher@college.com" && cleanPass === "teacher123") {
-        navigation.navigate("TeacherDashboard"); 
+        navigation.navigate("AttendanceScreen"); // Ensure this matches your navigation name
       } else {
         alert(t("Invalid Teacher Credentials", "ٹیچر کی معلومات درست نہیں ہیں"));
       }
