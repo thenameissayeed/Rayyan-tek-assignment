@@ -12,7 +12,7 @@ const AttendanceScreen = ({ navigation }) => {
   const [selectedClassId, setSelectedClassId] = useState("");
   const [language, setLanguage] = useState('ENG');
 
-  const API_URL = "http://localhost:5000/api/public";
+  const API_URL = "https://rayyan-tek-assignment.onrender.com/api/public";
 
   const loadData = async () => {
     try {
