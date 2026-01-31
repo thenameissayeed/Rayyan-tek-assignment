@@ -28,7 +28,7 @@ const AdminDashboard = ({ navigation }) => {
   const [editId, setEditId] = useState(null);
   const [nameInput, setNameInput] = useState("");
 
-  const API_URL = "http://localhost:5000/api/public";
+  const API_URL = "https://rayyan-tek-assignment.onrender.com/api/public";
 
   const t = (en, ur) => (language === "ENG" ? en : ur);
   const isUrdu = language === "URD";
