@@ -1,4 +1,4 @@
-# Nadwa Attendance Management System
+# Rayyan-tek Assignment
 
 A full-stack, bilingual (English/Urdu) attendance system featuring dedicated Admin and Teacher portals.
 
